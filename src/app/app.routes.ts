@@ -10,13 +10,16 @@ import { GarciaComponent } from './entregas/garcia/component/garciaComponent/gar
 import { PallasComponent } from './entregas/pallas/component/pallasComponent/pallasComponent';
 import { PalomaresComponent } from './entregas/palomares/component/palomaresComponent/palomaresComponent';
 import { PavonComponent } from './entregas/pavon/component/pavonComponent/pavonComponent';
-import { ReynaComponent } from './entregas/reyna/component/reynaComponent/reynaComponent';
+import { ReynaComponent } from './entregas/reyna/components/reynaComponent/reynaComponent';
 import { SalinasComponent } from './entregas/salinas/component/salinasComponent/salinasComponent';
 import { SemperteguiComponent } from './entregas/sempertegui/component/semperteguiComponent/semperteguiComponent';
 import { SilvestreComponent } from './entregas/silvestre/component/silvestreComponent/silvestreComponent';
 import { SoaresComponent } from './entregas/soares/component/soaresComponent/soaresComponent';
 import { UskiComponent } from './entregas/uski/component/uskiComponent/uskiComponent';
 import { ZanonComponent } from './entregas/zanon/component/zanonComponent/zanonComponent';
+/** Mis componentes */
+import { ProductListRoutedComponent } from './entregas/reyna/components/product-list-routed/product-list-routed';
+import { CategoryListRouted } from './entregas/reyna/components/category-list-routed/category-list-routed';
 import { DinoComponent } from './entregas/calinescu/component/dino-component/dino-component';
 import { DinoDetails } from './entregas/calinescu/component/dino-details/dino-details';
 import { Favoritos } from './entregas/calinescu/component/favoritos/favoritos';
@@ -68,7 +71,12 @@ export const routes: Routes = [
     { path: 'pallas', component: PallasComponent },
     { path: 'palomares', component: PalomaresComponent },
     { path: 'pavon', component: PavonComponent },
+    
+    /* mis rutas */
     { path: 'reyna', component: ReynaComponent },
+    { path: 'reyna/list', component: ProductListRoutedComponent }, 
+    { path: 'reyna/categories/:category', component: CategoryListRouted },
+
     { path: 'salinas', component: SalinasComponent },
     { path: 'sempertegui', component: SemperteguiComponent,
         children: [
